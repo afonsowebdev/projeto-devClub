@@ -6,5 +6,180 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
     font-family: 'Poppins', sans-serif;
+}
+:root {
+    --primary-color: #0f0f1e;
+    --secuind-color: #ffffff;
+    --tercer-color: #00f7ff;
+    --quarto-color: #1f1f3a;
+    --quinto-color: radial-gradient(circle, rgba(0, 247, 255, 0.2) 0%, rgba(15, 15, 30, 0) 70%); 
+}
+body {
+    background-color: var(--primary-color);
+    color: var(--secuind-color);
+    font-size: 16px;
+    overflow: hidden; /* Ele esconde tudo que estiver em scroll na página */
+}
+/* img {
+    width: 500px;
+    height: 500px;
+} */
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--tercer-color);
+    text-shadow: 0 0 5px rgba(0, 247, 255, 0.5);
+}
+header .logo span {
+    color: var(--secuind-color);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+header .navBar .nav-menu {
+    display: flex;
+    gap: 48px;
+}
+header .navBar .nav-menu .menu-item {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+header .navBar .nav-menu .menu-item a {
+    color: var(--secuind-color);
+}
+header .navBar .nav-menu .menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--tercer-color);
+    transition: width 0.5s ease;
+}
+header .navBar .nav-menu .menu-item:hover::after {
+    width: 100%;
+}
+/* Container */
+.container {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--quarto-color) 100%);
+    overflow: hidden;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: var(--quinto-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    z-index: 1;
+    animation: pulse 4s infinite alternate;
+}
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+.list {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.list .list-item {
+    position: absolute;
+    inset: 0; /* Coloca todas as posições em 0 isso desde top, left, bottom, rigth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: ; */
+    opacity: 0;
+}
+.list .list-item.active {
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.list .list-item .product-img {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.list .list-item .product-img img {
+    width: 600px;
+    height: 600px;
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+}
+.list .list-item .content {
+    width: 55%;
+    padding-right: 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.list .list-item .content .product-tag {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--tercer-color);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.list .list-item .content .title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--secuind-color);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+.list .list-item .content .description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--secuind-color);
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 600px;
+}
+.list .list-item .content .btn {
+    padding: 12px 10px;
+    background: linear-gradient(90deg, var(--tercer-color) 0%, var(--quarto-color) 100%);
+    border: none;
+    border-radius: 5px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.list .list-item .content .btn:hover {
+    position: absolute;
+    transform: scale(1.05);
+    background: linear-gradient(90deg, var(--quarto-color) 0%, var(--tercer-color) 100%);
+    color: var(--secuind-color);
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.5), 0 0 20px rgba(0, 247, 255, 0.5), 0 0 30px rgba(0, 247, 255, 0.5);
 }

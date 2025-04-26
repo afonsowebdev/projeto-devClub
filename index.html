@@ -13,20 +13,20 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="logo">
-            DevClub
+            Dev<span>Club</span>.
         </div>
         <nav class="navBar" id="navBar">
             <ul class="nav-menu">
-                <li class="menu-item"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="#">Início</a></li>
                 <li class="menu-item"><a href="#">Produtos</a></li>
                 <li class="menu-item"><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="contanier">
+    <main class="container">
         <div class="tech-circle">
             <div class="circle"></div>
             <div class="circle"></div>
@@ -35,24 +35,96 @@
         </div>
 
         <div class="list">
-          <div class="list-item active">
-            <div class="product-img">
-                <img src="" alt="">
+            <div class="list-item active">
+
+                <div class="product-img">
+                    <img src="./images/iPad.png" alt="iPad">
+                </div>
+
+                <div class="content">
+                    <p class="product-tag">Novos Lançamento</p>
+                    <h2 class="title">iPad</h2>
+                    <p class="description">O iPad é um tablet desenvolvido pela Apple, conhecido por sua interface
+                        intuitiva e ampla gama de aplicativos. Poderoso, versátil e intuitivo. O iPad é feito para tudo:
+                        estudar, criar, trabalhar ou se divertir. Com desempenho de ponta e milhares de apps, ele se
+                        adapta ao seu dia a dia como nenhum outro.</p>
+                    <button class="btn">Saiba mais</button>
+                </div>
             </div>
-          </div>
 
-          <div class="list-item">
+            <div class="list-item">
+                <div class="product-img">
+                    <img src="./images/apple-vision-pro.png" alt="Apple Vision Pro">
+                </div>
 
-          </div>
+                <div class="content">
+                    <p class="product-tag">Novos Lançamento</p>
+                    <h2 class="title">Apple Vision Pro</h2>
+                    <p class="description"> Mergulhe no futuro com o Apple Vision Pro: uma experiência imersiva que une
+                        realidade aumentada e virtual com controles por olhos, mãos e voz. Veja, ouça e interaja com o
+                        digital como nunca antes. O Apple Vision Pro é um dispositivo de realidade aumentada que combina
+                        tecnologia avançada com design elegante. </p>
+                    <button class="btn">Saiba mais</button>
+                </div>
+            </div>
 
-          <div class="list-item">
+            <div class="list-item">
+                <div class="product-img">
+                    <img src="./images/Air-pods.png" alt="Air Pods Max">
+                </div>
 
-          </div>
+                <div class="container">
+                    <p class="product-tag">Som Premium</p>
+                    <h2 class="title">AirPods</h2>
+                    <p class="description">Som de alta qualidade, conexão instantânea e liberdade total. Com os AirPods,
+                        ouvir música, atender chamadas e interagir com a Siri fica mais fácil e incrível a cada momento.
+                    </p>
+                    <button class="btn">Saiba mais</button>
+                </div>
 
-          <div class="list-item">
+            </div>
 
-          </div>
+            <div class="list-item">
+                <div class="product-img">
+                    <img src="./images/apple-watch.png" alt="Apple Watch">
+                </div>
 
+                <div class="container">
+                    <p class="product-tag">Novos Lançamento</p>
+                    <h2 class="title">Apple Watch</h2>
+                    <p class="description">Muito mais que um relógio. O Apple Watch ajuda você a cuidar da saúde, se
+                        manter conectado e ativo, com estilo e tecnologia no seu pulso.</p>
+                    <button class="btn">Saiba mais</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button class="arrow-btn" id="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+            </button>
+
+            <button class="arrow-btn" id="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="indicators">
+            <div class="number">01</div>
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
     </main>
 </body>
