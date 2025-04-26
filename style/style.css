@@ -193,7 +193,7 @@ header .navBar .nav-menu .menu-item:hover::after {
     letter-spacing: 2px;
     margin-bottom: 10px;
     /* Animação */
-    transform: translateX(200px);
+    transform: translateX(-200px);
     opacity: 0;
     transition: transform 0.7s ease, opacity 0.7s ease;
     transition-delay: 0.5s;
@@ -213,7 +213,7 @@ header .navBar .nav-menu .menu-item:hover::after {
     margin-bottom: 20px;
 
     /* Animação */
-    transform: translateX(200px);
+    transform: translateX(-200px);
     opacity: 0;
     transition: transform 0.7s ease, opacity 0.7s ease;
     transition-delay: 0.5s;
@@ -233,7 +233,7 @@ header .navBar .nav-menu .menu-item:hover::after {
     text-align: justify;
     max-width: 600px;
     /* Animação */
-    transform: translateX(200px);
+    transform: translateX(-200px);
     opacity: 0;
     transition: transform 0.7s ease, opacity 0.7s ease;
     transition-delay: 0.5s;
@@ -254,7 +254,7 @@ header .navBar .nav-menu .menu-item:hover::after {
     cursor: pointer;
     transition: 0.5s ease;
     /* Animação */
-    transform: translateX(200px);
+    transform: translateX(-200px);
     opacity: 0;
     transition: transform 0.7s ease, opacity 0.7s ease;
     transition-delay: 0.5s;
